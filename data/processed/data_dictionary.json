@@ -1,0 +1,217 @@
+{
+  "Age": {
+    "description": "Age at diagnosis (years)",
+    "dtype": "int64",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "min": 20.0,
+    "max": 89.0,
+    "mean": 55.83
+  },
+  "Race": {
+    "description": "Race/ethnicity category (SEER classification)",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "Asian/Pacific Islander",
+      "Black",
+      "Other",
+      "White"
+    ],
+    "n_unique": 4
+  },
+  "Marital Status": {
+    "description": "Marital status at time of diagnosis",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "Divorced",
+      "Married",
+      "Single",
+      "Widowed"
+    ],
+    "n_unique": 4
+  },
+  "T Stage": {
+    "description": "Tumour size stage \u2014 AJCC 6th edition",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "T1",
+      "T2",
+      "T3",
+      "T4"
+    ],
+    "n_unique": 4
+  },
+  "N Stage": {
+    "description": "Regional lymph node involvement \u2014 AJCC 6th edition",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "N0",
+      "N1",
+      "N2",
+      "N3"
+    ],
+    "n_unique": 4
+  },
+  "6th Stage": {
+    "description": "Overall AJCC 6th edition stage",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "I",
+      "IIA",
+      "IIB",
+      "IIIA",
+      "IIIB",
+      "IIIC"
+    ],
+    "n_unique": 6
+  },
+  "Grade": {
+    "description": "Histological tumour grade (differentiation)",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "1 Well differentiated",
+      "2 Moderately differentiated",
+      "3 Poorly differentiated",
+      "anaplastic; Grade IV"
+    ],
+    "n_unique": 4
+  },
+  "A Stage": {
+    "description": "Extent of spread: Regional vs Distant",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "Distant",
+      "Regional"
+    ],
+    "n_unique": 2
+  },
+  "Tumor Size": {
+    "description": "Tumour size in millimetres",
+    "dtype": "float64",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "min": 1.0,
+    "max": 129.0,
+    "mean": 30.96
+  },
+  "Regional Node Examined": {
+    "description": "Number of regional lymph nodes surgically examined",
+    "dtype": "Int64",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "min": 1.0,
+    "max": 29.0,
+    "mean": 15.16
+  },
+  "Regional Node Positive": {
+    "description": "Number of lymph nodes with cancer involvement",
+    "dtype": "int64",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "min": 0.0,
+    "max": 19.0,
+    "mean": 1.98
+  },
+  "Estrogen Status": {
+    "description": "Oestrogen receptor (ER) status",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "Negative",
+      "Positive"
+    ],
+    "n_unique": 2
+  },
+  "Progesterone Status": {
+    "description": "Progesterone receptor (PR) status",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "Negative",
+      "Positive"
+    ],
+    "n_unique": 2
+  },
+  "Survival Months": {
+    "description": "Months from diagnosis to last follow-up or death",
+    "dtype": "int64",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "min": 1.0,
+    "max": 107.0,
+    "mean": 78.03
+  },
+  "Status": {
+    "description": "Vital status at last follow-up (Alive / Dead)",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "Alive",
+      "Dead"
+    ],
+    "n_unique": 2
+  },
+  "Status_Code": {
+    "description": "DERIVED \u2014 Binary outcome: 1=Dead (event), 0=Alive (censored)",
+    "dtype": "int64",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.31
+  },
+  "Age Group": {
+    "description": "DERIVED \u2014 10-year age bands for group analysis",
+    "dtype": "category",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "40\u201349",
+      "50\u201359",
+      "60\u201369",
+      "70+",
+      "<40"
+    ],
+    "n_unique": 5
+  },
+  "Stage Group": {
+    "description": "DERIVED \u2014 Simplified stage: Stage I / II / III",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "Stage I",
+      "Stage II",
+      "Stage III"
+    ],
+    "n_unique": 3
+  },
+  "Receptor Status": {
+    "description": "DERIVED \u2014 Hormone Receptor+ vs Triple Negative / HR-",
+    "dtype": "object",
+    "n_missing": 0,
+    "pct_missing": 0.0,
+    "unique_values": [
+      "Hormone Receptor+",
+      "Triple Negative / HR-"
+    ],
+    "n_unique": 2
+  }
+}

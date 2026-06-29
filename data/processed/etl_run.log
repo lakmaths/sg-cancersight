@@ -1,0 +1,57 @@
+2026-06-29 02:01:30,061  INFO      ==================================================
+2026-06-29 02:01:30,062  INFO      SG-CancerSight ETL Pipeline — START
+2026-06-29 02:01:30,062  INFO      Run timestamp: 2026-06-29T02:01:30.062260
+2026-06-29 02:01:30,062  INFO      ==================================================
+2026-06-29 02:01:30,062  INFO      Loading raw data from: /home/claude/sg-cancersight/data/raw/seer_raw.csv
+2026-06-29 02:01:30,076  INFO      Raw shape: 4,024 rows × 15 columns
+2026-06-29 02:01:30,080  INFO      Missing values found in: ['Grade', 'Tumor Size', 'Regional Node Examined']
+2026-06-29 02:01:30,082  WARNING   Invalid ages (< 18 or > 100): 4 rows
+2026-06-29 02:01:30,083  WARNING   Invalid survival months (< 1): 5 rows
+2026-06-29 02:01:30,085  WARNING   Tumour size sentinel (999): 3 rows
+2026-06-29 02:01:30,093  WARNING   Nodes positive > nodes examined: 231 rows
+2026-06-29 02:01:30,093  INFO      Validation complete.
+2026-06-29 02:01:30,095  INFO      Starting cleaning: 4,024 rows
+2026-06-29 02:01:30,096  INFO      Renamed 'Reginol Node Positive' → 'Regional Node Positive'
+2026-06-29 02:01:30,098  INFO      Removed 4 rows with invalid age
+2026-06-29 02:01:30,100  INFO      Removed 5 rows with negative survival months
+2026-06-29 02:01:30,101  INFO      Recoded 3 tumour size sentinel (999) → NaN
+2026-06-29 02:01:30,105  INFO      Imputed Tumor Size: 130 → 0 missing (median within T Stage)
+2026-06-29 02:01:30,107  INFO      Imputed Regional Node Examined with overall median
+2026-06-29 02:01:30,108  INFO      Imputed Grade with mode: '3 Poorly differentiated'
+2026-06-29 02:01:30,118  INFO      Encoded Status → Status_Code (1=Dead, 0=Alive)
+2026-06-29 02:01:30,120  INFO      Created Age Group categorical variable
+2026-06-29 02:01:30,122  INFO      Created Stage Group (I / II / III)
+2026-06-29 02:01:30,124  INFO      Created Receptor Status variable
+2026-06-29 02:01:30,124  INFO      Cleaning complete: 4,024 → 4,015 rows (9 removed)
+2026-06-29 02:01:30,152  INFO      Clean data saved: /home/claude/sg-cancersight/data/processed/seer_clean.csv
+2026-06-29 02:01:30,180  INFO      Data dictionary saved: /home/claude/sg-cancersight/data/processed/data_dictionary.json
+2026-06-29 02:01:30,181  INFO      ETL Pipeline — COMPLETE
+2026-06-29 02:01:42,564  INFO      ==================================================
+2026-06-29 02:01:42,564  INFO      SG-CancerSight ETL Pipeline — START
+2026-06-29 02:01:42,564  INFO      Run timestamp: 2026-06-29T02:01:42.564693
+2026-06-29 02:01:42,564  INFO      ==================================================
+2026-06-29 02:01:42,564  INFO      Loading raw data from: /home/claude/sg-cancersight/data/raw/seer_raw.csv
+2026-06-29 02:01:42,573  INFO      Raw shape: 4,024 rows × 15 columns
+2026-06-29 02:01:42,577  INFO      Missing values found in: ['Grade', 'Tumor Size', 'Regional Node Examined']
+2026-06-29 02:01:42,578  WARNING   Invalid ages (< 18 or > 100): 4 rows
+2026-06-29 02:01:42,579  WARNING   Invalid survival months (< 1): 5 rows
+2026-06-29 02:01:42,580  WARNING   Tumour size sentinel (999): 3 rows
+2026-06-29 02:01:42,589  WARNING   Nodes positive > nodes examined: 231 rows
+2026-06-29 02:01:42,589  INFO      Validation complete.
+2026-06-29 02:01:42,590  INFO      Starting cleaning: 4,024 rows
+2026-06-29 02:01:42,590  INFO      Renamed 'Reginol Node Positive' → 'Regional Node Positive'
+2026-06-29 02:01:42,592  INFO      Removed 4 rows with invalid age
+2026-06-29 02:01:42,593  INFO      Removed 5 rows with negative survival months
+2026-06-29 02:01:42,594  INFO      Recoded 3 tumour size sentinel (999) → NaN
+2026-06-29 02:01:42,598  INFO      Imputed Tumor Size: 130 → 0 missing (median within T Stage)
+2026-06-29 02:01:42,599  INFO      Imputed Regional Node Examined with overall median
+2026-06-29 02:01:42,600  INFO      Imputed Grade with mode: '3 Poorly differentiated'
+2026-06-29 02:01:42,609  INFO      Encoded Status → Status_Code (1=Dead, 0=Alive)
+2026-06-29 02:01:42,611  INFO      Created Age Group categorical variable
+2026-06-29 02:01:42,612  INFO      Created Stage Group (I / II / III)
+2026-06-29 02:01:42,614  INFO      Created Receptor Status variable
+2026-06-29 02:01:42,643  INFO      Capped Regional Node Positive to ≤ Regional Node Examined for 232 rows
+2026-06-29 02:01:42,643  INFO      Cleaning complete: 4,024 → 4,015 rows (9 removed)
+2026-06-29 02:01:42,670  INFO      Clean data saved: /home/claude/sg-cancersight/data/processed/seer_clean.csv
+2026-06-29 02:01:42,694  INFO      Data dictionary saved: /home/claude/sg-cancersight/data/processed/data_dictionary.json
+2026-06-29 02:01:42,694  INFO      ETL Pipeline — COMPLETE
